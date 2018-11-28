@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$(".add").click(function() {
+    $("form > p:first-child").clone(true).insertBefore("form > p:last-child");
+    return false;
+});
+
+$("p").click(function() {
+    $(this).hide() //parent().remove();
+});
+});
+</script>
+
+
+
+<form>
+    <p>
+        <label>Name:</label> <input type="text">
+        <label>Age:</label> <input type="text">
+        <span class="remove">Remove</span>
+    </p>
+    <p>
+        <span class="add">Add fields</span>
+    </p>
+</form>
